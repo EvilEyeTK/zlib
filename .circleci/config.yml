@@ -7,9 +7,6 @@ jobs:
     steps:
       - checkout
       - run: mkdir build && cd build && cmake .. && cmake --build .
-      - run: cd build
-      - run: cmake ..
-      - run: cmake --build .
 workflows:
   version: 2
   build:
