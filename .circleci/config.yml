@@ -1,9 +1,16 @@
 version: 2
 jobs:
-  build:
+  gcc:
     working_directory: /ws
     docker:
       - image: enumack/buildcontainers:gcc-8.1
+    steps:
+      - checkout
+      - run: mkdir build && cd build && cmake .. && cmake --build .
+  clang:
+    working_directory: /ws
+    docker:
+      - image: enumack/buildcontainers:clang-4.0.1
     steps:
       - checkout
       - run: mkdir build && cd build && cmake .. && cmake --build .
