@@ -1,6 +1,7 @@
 version: 2
 jobs:
   build:
+    working_directory: /ws
     docker:
       - image: enumack/buildcontainers:gcc-8.1
     steps:
