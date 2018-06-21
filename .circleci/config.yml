@@ -1,6 +1,8 @@
 version: 2
 jobs:
   build:
+    docker:
+      - image: enumack/buildcontainers:gcc-7
     steps:
       - checkout
       - run: mkdir build
