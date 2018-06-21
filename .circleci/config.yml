@@ -6,8 +6,7 @@ jobs:
       - image: enumack/buildcontainers:gcc-8.1
     steps:
       - checkout
-      - run: ls
-      - run: mkdir build
+      - run: mkdir build && cd build && cmake .. && cmake --build .
       - run: cd build
       - run: cmake ..
       - run: cmake --build .
