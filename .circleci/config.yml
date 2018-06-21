@@ -2,9 +2,10 @@ version: 2
 jobs:
   build:
     docker:
-      - image: enumack/buildcontainers:gcc-7
+      - image: enumack/buildcontainers:gcc-8.1
     steps:
       - checkout
+      - run: ls
       - run: mkdir build
       - run: cd build
       - run: cmake ..
